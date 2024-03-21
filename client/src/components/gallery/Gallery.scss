@@ -1,0 +1,31 @@
+@import "../../index.scss";
+#fullView {
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  z-index: 9999999;
+  position: fixed;
+  background-color: #00000041;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 90vw;
+    height: auto;
+    @include lg {
+      height: 90vh;
+      width: auto;
+    }
+  }
+
+  .button {
+    position: fixed;
+    top: 2rem;
+    right: 5rem;
+    background-color: transparent;
+    position: absolute;
+    font-size: 4rem;
+    border: none;
+  }
+}

@@ -1,0 +1,74 @@
+@import "../../mixin.scss";
+.RegisterContainer {
+  background-image: linear-gradient(
+    to top right,
+    $main-color1 0%,
+    $main-color2 100%
+  );
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+  @include flexCenter(0);
+
+  .cardContainer {
+    .logo {
+      width: 40rem;
+      position: absolute;
+      top: 0;
+      @include lg {
+        width: 30rem;
+      }
+    }
+    position: relative;
+    background-color: #fff;
+    max-width: 80%;
+    border-radius: 5px;
+    padding: 10rem;
+    margin: auto;
+
+    @include ssm {
+      max-width: 70%;
+      padding: 8rem;
+    }
+
+    @include sm {
+      max-width: 60%;
+      padding: 10rem 7rem;
+    }
+
+    .card {
+      .heading {
+        font-size: 7rem;
+        text-transform: capitalize;
+        font-family: $heading;
+        color: rgb(231, 120, 138);
+        text-align: center;
+        margin: 2rem;
+        @include lg {
+          font-size: 5rem;
+        }
+      }
+      .form {
+        @include flexColCenter(1rem);
+        &-group {
+          width: 100%;
+          margin: 1.5rem;
+        }
+
+        .submit {
+          margin: auto;
+          background-image: linear-gradient(100deg, $main-color2, $main-color1);
+          color: $text-white;
+          padding: 3rem 6rem;
+          margin: 2rem;
+          font-size: 3rem;
+          text-transform: uppercase;
+          @include lg {
+            font-size: 2.2rem;
+            padding: 1.9rem 4.5rem;
+          }
+        }
+      }
+    }
+  }
+}
